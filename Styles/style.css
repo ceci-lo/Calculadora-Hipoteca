@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-style: normal;
+}
+
+/*## Colors
+
+### Primary
+
+- Lime: hsl(61, 70%, 52%)
+- Red: hsl(4, 69%, 50%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Slate 100: hsl(202, 86%, 94%)
+- Slate 300: hsl(203, 41%, 72%)
+- Slate 500: hsl(200, 26%, 54%)
+- Slate 700: hsl(200, 24%, 40%)
+- Slate 900: hsl(202, 55%, 16%)
+
+
+-Weights: 500, 700
+*/
+@media(min-width: 320px) {
+    .container {
+        height: auto;
+    }
+
+    .container1__calculator {
+        margin: 20px 15px;
+        height: 60%;
+    }
+
+    .container2__results {
+        height: 40%;
+        background-color: hsl(202, 55%, 16%);
+    }
+
+
+    .container2__results__img {
+        background-image: url("../assets/images/illustration-empty.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 120px;
+        padding: 15px 15px;
+    }
+
+    .container2__results__alineacion {
+        margin: 20px 15px;
+        padding:20px 0px;
+       
+    }
+
+    .container2__results__alineacion h2 {
+        text-align: center;
+        font-size: 18px;
+        padding: 10px 0px;
+        color: hsl(0, 0%, 100%);
+    }
+    .container2__results__alineacion p{
+        color:   hsl(203, 41%, 72%);
+        text-align: center;
+        padding:0px 21px;
+        font-size: 11px;
+        line-height: 1.4em;
+    }
+}
