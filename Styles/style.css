@@ -25,6 +25,7 @@
 
 
 -Weights: 500, 700
+
 */
 @media(min-width: 320px) {
     .container {
@@ -34,8 +35,50 @@
     .container1__calculator {
         margin: 20px 15px;
         height: 60%;
+        color: hsl(200, 24%, 40%) ;
+        
+    }
+    .container1__calculator__title{
+        padding-bottom: 10px;
+    }
+    .container1__calculator__title h2{
+         color: hsl(202, 55%, 16%);
+         
+    }
+     .container1__calculator__title a{
+        text-decoration: underline;
+        list-style: none;
+        color: hsl(200, 24%, 40%) ;
+        font-size: 13.5px;
+    }
+    .container1__calculator label{
+        font-size: 14.5px;
+        
+    }
+    .container1__calculator input{
+        width: 100%;
+        margin: 7px 0px 12px 0px;
+        padding:5px 0px;
+        border-radius: 3px;
+        border-color: hsl(200, 24%, 40%) ;
+        border-width: 1px;
+        opacity: 0.5;
     }
 
+    .container1__calculator button{
+       background-color: hsl(61, 70%, 52%);
+        width: 100%;
+        border-radius: 1024px;
+        padding: 8px;
+    }
+    .container1__calculator button img{
+        position:relative;
+        top:5px;
+        text-align: center;
+        padding: 0px 8px 0px 0px;
+       
+    }
+    /*----CONTAINER 2*/
     .container2__results {
         height: 40%;
         background-color: hsl(202, 55%, 16%);
