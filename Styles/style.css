@@ -66,10 +66,14 @@
     }
 #repayment, #InterestOnly{
     width: auto;
-    border-color:  black;
+   
 }
+
     .container1__calculator button{
        background-color: hsl(61, 70%, 52%);
+       background-image: url("/assets/images/icon-calculator.svg");
+       background-repeat: no-repeat;
+     
         width: 100%;
         border-radius: 1024px;
         padding: 8px;
