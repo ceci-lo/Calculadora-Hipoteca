@@ -6,7 +6,11 @@
     font-family: "Plus Jakarta Sans", sans-serif;
     font-style: normal;
 }
-
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /*## Colors
 
 ### Primary
@@ -51,6 +55,9 @@
         color: hsl(200, 24%, 40%) ;
         font-size: 13.5px;
     }
+    form{
+        position: relative;
+    }
     .container1__calculator label{
         font-size: 14.5px;
         
@@ -63,6 +70,14 @@
         border-color: hsl(200, 24%, 40%) ;
         border-width: 1px;
         opacity: 0.5;
+        display: block;
+    }
+    .container1__calculator  span{
+        position: absolute;
+        padding: 4.8px 8px;
+        left:2px;
+        top:29px;
+        background-color: hsl(201, 66%, 86%);
     }
 #repayment, #InterestOnly{
     width: auto;
@@ -119,12 +134,12 @@
         width: 100%;
         border-radius: 1024px;
         padding: 8px;
+        align-items: center;
     }
     .container1__calculator button img{
         position:relative;
         top:5px;
         text-align: center;
-        
         padding: 0px 8px 0px 0px;
        
     }
