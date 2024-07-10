@@ -68,12 +68,54 @@
     width: auto;
    
 }
+/*RADIO BUTTON*/
+ 
+  input[type="radio"]{
+    display:none;
+  }
+  
+  .MortgageRate{
+    width: 100%;
+    position:relative;
+    color: hsl(202, 55%, 16%);
+    font-family:"Poppins", sans-serif;
+    cursor:pointer;
+    display:inline-flex;
+    gap:0.8em;
+    border: 3px solid hsl(200, 24%, 40%);
+    border-radius:3px; 
+    border-width: 1px;
+    padding: 8px 0px;
+    align-items: center;
+    margin: 10px 0px;
+  }
+  
+  .MortgageRate:before {
+    content: "";
+    height: 1em;
+    width: 1em;
+    border: 1px solid hsl(200, 24%, 40%);
+    border-radius: 50%;
+    margin-left: 9px;
+  }
+  
+  input[type="radio"]:checked + .MortgageRate:before{
+    height: 1em;
+    width: 1em;
+    border: 2px solid hsl(61, 70%, 52%);
+    background-color: hsl(61, 55%, 85%);
+    color: hsl(202, 55%, 16%);
+  }
+  input[type="radio"]:checked + .MortgageRate{
+    background-color: hsl(61, 55%, 85%);
+    border-color: hsl(61, 70%, 52%) ;
+    color: hsl(202, 55%, 16%);
+  }
 
     .container1__calculator button{
        background-color: hsl(61, 70%, 52%);
        background-image: url("/assets/images/icon-calculator.svg");
        background-repeat: no-repeat;
-     
         width: 100%;
         border-radius: 1024px;
         padding: 8px;
@@ -82,6 +124,7 @@
         position:relative;
         top:5px;
         text-align: center;
+        
         padding: 0px 8px 0px 0px;
        
     }
