@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-style: normal;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(202, 86%, 94%);
+}
+/*## Colors
+
+### Primary
+
+- Lime: hsl(61, 70%, 52%)
+- Red: hsl(4, 69%, 50%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Slate 100: hsl(202, 86%, 94%)
+- Slate 300: hsl(203, 41%, 72%)
+- Slate 500: hsl(200, 26%, 54%)
+- Slate 700: hsl(200, 24%, 40%)
+- Slate 900: hsl(202, 55%, 16%)
+
+
+-Weights: 500, 700
+
+*/
+@media(min-width: 320px) {
+    .container {
+        height: auto;
+        background-color: hsl(0, 0%, 100%);
+    }
+
+    .container1__calculator {
+        margin: 20px 15px;
+        height: 60%;
+        color: hsl(200, 24%, 40%) ;
+        
+        
+    }
+    .container1__calculator__title{
+        padding-bottom: 10px;
+    }
+    .container1__calculator__title h2{
+         color: hsl(202, 55%, 16%);
+         
+    }
+     .container1__calculator__title a{
+        text-decoration: underline;
+        list-style: none;
+        color: hsl(200, 24%, 40%) ;
+        font-size: 13.5px;
+    }
+    form{
+        position: relative;
+    }
+    .container1__calculator label{
+        font-size: 14.5px;
+        
+    }
+    .container1__calculator input{
+        width: 100%;
+        margin: 7px 0px 12px 0px;
+        padding:5px 0px;
+        border-radius: 3px;
+        border-color: hsl(200, 24%, 40%) ;
+        border-width: 1px;
+        opacity: 0.5;
+        display: block;
+    }
+    .spanUsd{
+        position: absolute;
+        padding: 4.8px 8px;
+        left:2px;
+        top:29px;
+        background-color: hsl(201deg 62.37% 91.63%);
+    }
+    .spanmTerm {
+        position: absolute;
+        padding: 4.8px 8px;
+        background-color: hsl(201deg 62.37% 91.63%);
+        color: hsl(200, 24%, 40%);
+        top: 123px;
+        right: -1px;
+
+}
+    .spanPercent{
+        position: absolute;
+        padding: 4.8px 15px;
+        right: 0;
+        top: 217px;
+        color: hsl(200, 24%, 40%);
+        
+        background-color: hsl(201deg 62.37% 91.63%);
+    }
+#repayment, #InterestOnly{
+    width: auto;
+   
+}
+/*RADIO BUTTON*/
+ 
+  input[type="radio"]{
+    display:none;
+  }
+  
+  .MortgageRate{
+    width: 100%;
+    position:relative;
+    color: hsl(202, 55%, 16%);
+    font-family:"Poppins", sans-serif;
+    cursor:pointer;
+    display:inline-flex;
+    gap:0.8em;
+    border: 3px solid hsl(200, 24%, 40%);
+    border-radius:3px; 
+    border-width: 1px;
+    padding: 8px 0px;
+    align-items: center;
+    margin: 10px 0px;
+  }
+  
+  .MortgageRate:before {
+    content: "";
+    height: 1em;
+    width: 1em;
+    border: 1px solid hsl(200, 24%, 40%);
+    border-radius: 50%;
+    margin-left: 9px;
+  }
+  
+  input[type="radio"]:checked + .MortgageRate:before{
+    height: 1em;
+    width: 1em;
+    border: 2px solid hsl(61, 70%, 52%);
+    background-color: hsl(61, 55%, 85%);
+    color: hsl(202, 55%, 16%);
+  }
+  input[type="radio"]:checked + .MortgageRate{
+    background-color: hsl(61, 55%, 85%);
+    border-color: hsl(61, 70%, 52%) ;
+    color: hsl(202, 55%, 16%);
+  }
+
+    .container1__calculator button{
+        position: relative;
+       background-color: hsl(61, 70%, 52%);
+     
+       background-repeat: no-repeat;
+        width: 100%;
+        border-radius: 1024px;
+        padding: 8px;
+        align-items: center;
+    }
+    .container1__calculator button img{
+        position:absolute;
+        top: 7px;
+        left: 30px;
+        text-align: center;
+        padding: 0px 8px 0px 0px;
+       
+    }
+    /*----CONTAINER 2*/
+    .container2__results {
+        height: 40%;
+        background-color: hsl(202, 55%, 16%);
+    }
+
+
+    .container2__results__img {
+        background-image: url("../assets/images/illustration-empty.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 120px;
+        padding: 15px 15px;
+    }
+
+    .container2__results__alineacion {
+        margin: 20px 15px;
+        padding:20px 0px;
+       
+    }
+
+    .container2__results__alineacion h2 {
+        text-align: center;
+        font-size: 18px;
+        padding: 10px 0px;
+        color: hsl(0, 0%, 100%);
+    }
+    .container2__results__alineacion p{
+        color:   hsl(203, 41%, 72%);
+        text-align: center;
+        padding:0px 21px;
+        font-size: 11px;
+        line-height: 1.4em;
+    }
+}
