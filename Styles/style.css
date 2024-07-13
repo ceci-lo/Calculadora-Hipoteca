@@ -79,11 +79,19 @@ body{
         top:29px;
         background-color: hsl(201, 66%, 86%);
     }
+    .spanmTerm {
+        position: absolute;
+        padding: 4.8px 8px;
+        border: 1px solid hsl(200, 24%, 40%);
+        background-color: hsl(200, 24%, 40%);
+        color: white;
+        top: 121px;
+        right: 0px;
 
+}
     .spanPercent{
         position: absolute;
         padding: 4.8px 15px;
-       
         right: 0;
         top: 217px;
         background-color: hsl(201deg 41.06% 62.84%);
