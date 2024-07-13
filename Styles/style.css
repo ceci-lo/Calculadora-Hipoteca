@@ -10,6 +10,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: hsl(202, 86%, 94%);
 }
 /*## Colors
 
@@ -34,12 +35,14 @@ body{
 @media(min-width: 320px) {
     .container {
         height: auto;
+        background-color: hsl(0, 0%, 100%);
     }
 
     .container1__calculator {
         margin: 20px 15px;
         height: 60%;
         color: hsl(200, 24%, 40%) ;
+        
         
     }
     .container1__calculator__title{
@@ -77,16 +80,15 @@ body{
         padding: 4.8px 8px;
         left:2px;
         top:29px;
-        background-color: hsl(201, 66%, 86%);
+        background-color: hsl(201deg 62.37% 91.63%);
     }
     .spanmTerm {
         position: absolute;
         padding: 4.8px 8px;
-        border: 1px solid hsl(200, 24%, 40%);
-        background-color: hsl(200, 24%, 40%);
-        color: white;
-        top: 121px;
-        right: 0px;
+        background-color: hsl(201deg 62.37% 91.63%);
+        color: hsl(200, 24%, 40%);
+        top: 123px;
+        right: -1px;
 
 }
     .spanPercent{
@@ -94,7 +96,9 @@ body{
         padding: 4.8px 15px;
         right: 0;
         top: 217px;
-        background-color: hsl(201deg 41.06% 62.84%);
+        color: hsl(200, 24%, 40%);
+        
+        background-color: hsl(201deg 62.37% 91.63%);
     }
 #repayment, #InterestOnly{
     width: auto;
@@ -145,8 +149,9 @@ body{
   }
 
     .container1__calculator button{
+        position: relative;
        background-color: hsl(61, 70%, 52%);
-       background-image: url("/assets/images/icon-calculator.svg");
+     
        background-repeat: no-repeat;
         width: 100%;
         border-radius: 1024px;
@@ -154,8 +159,9 @@ body{
         align-items: center;
     }
     .container1__calculator button img{
-        position:relative;
-        top:5px;
+        position:absolute;
+        top: 7px;
+        left: 30px;
         text-align: center;
         padding: 0px 8px 0px 0px;
        
