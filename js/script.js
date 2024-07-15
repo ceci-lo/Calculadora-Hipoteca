@@ -24,10 +24,12 @@ calculate.addEventListener("click", (e) => {
   mostrarAviso();
   if (radioRepayment.checked) {
     console.log("repayment : ", repayment);
+    crearTarjetaResultado(repayment);
   } else if (radioInterestOnly.checked) {
     console.log("Intertest Only : ", interestOnly);
+    crearTarjetaResultado(interestOnly);
+
   }
-  crearTarjetaResultado();
 });
 
 function mostrarAviso() {
@@ -53,7 +55,7 @@ function mostrarAviso() {
 
 function mostrarResultado() {}
 
-function crearTarjetaResultado() {
+function crearTarjetaResultado(result) {
   let padre = document.getElementsByClassName("container2__results_p")[0].parentNode;
 
   let nuevoDiv = document.createElement("div");
@@ -65,16 +67,17 @@ function crearTarjetaResultado() {
   let p1 = document.createElement("p");
   p1.innerText = "Your monthly repayments";
 
+  let monto = document.createElement("p");
+  
+
   let p2 = document.createElement("p");
-  p2.innerText = "Your monthly repayments";
+  p2.innerText = "Total you'll repay over the term";
 
 
   let containerTarjeta = document.getElementsByClassName("container_tarjeta")[0];
 
   containerTarjeta.appendChild(p1);
+  monto.innerText = result;
+  containerTarjeta.appendChild(monto);
   containerTarjeta.appendChild(p2);
-
-
-
-
 }
