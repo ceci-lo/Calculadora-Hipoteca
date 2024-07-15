@@ -8,6 +8,8 @@ let radioInterestOnly = document.getElementById("InterestOnly");
 let calculate = document.getElementById("btn");
 
 calculate.addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
   let month = years.value * 12;
   let TIN = interest.value / 12;
   let TINt = TIN / 100;
@@ -19,16 +21,20 @@ calculate.addEventListener("click", (e) => {
   let interestOnly = Math.round(
     (repayment * month - capitalPrestado.value) / 360
   );
-mostrarAviso();
+  mostrarAviso();
   if (radioRepayment.checked) {
     console.log("repayment : ", repayment);
   } else if (radioInterestOnly.checked) {
     console.log("Intertest Only : ", interestOnly);
   }
+  crearTarjetaResultado();
 });
 
 function mostrarAviso() {
-  let oldTitle = document.getElementsByClassName("container2__results_title")[0];
+  console.log("mostrar aviso");
+  let oldTitle = document.getElementsByClassName(
+    "container2__results_title"
+  )[0];
   let oldP = document.getElementsByClassName("container2__results_p")[0];
   let img = document.getElementsByClassName("container2__results__img")[0];
 
@@ -37,14 +43,38 @@ function mostrarAviso() {
   oldP.innerText =
     'Your results shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again';
 
-    //Estilos
-   // Titulo 
+  //Estilos
+  // Titulo
 
-   oldTitle.style.textAlign = "left";
-   oldP.style.textAlign = "left";
-   oldP.style.padding = "0px 3px";
-
-
+  oldTitle.style.textAlign = "left";
+  oldP.style.textAlign = "left";
+  oldP.style.padding = "0px 3px";
 }
 
 function mostrarResultado() {}
+
+function crearTarjetaResultado() {
+  let padre = document.getElementsByClassName("container2__results_p")[0].parentNode;
+
+  let nuevoDiv = document.createElement("div");
+  let divAnterior = document.getElementsByClassName("container2__results_p")[0];
+
+  padre.insertBefore(nuevoDiv, divAnterior.nextSibling);
+  nuevoDiv.className  = "container_tarjeta";
+
+  let p1 = document.createElement("p");
+  p1.innerText = "Your monthly repayments";
+
+  let p2 = document.createElement("p");
+  p2.innerText = "Your monthly repayments";
+
+
+  let containerTarjeta = document.getElementsByClassName("container_tarjeta")[0];
+
+  containerTarjeta.appendChild(p1);
+  containerTarjeta.appendChild(p2);
+
+
+
+
+}
