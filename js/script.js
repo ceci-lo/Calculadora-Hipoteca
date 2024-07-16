@@ -17,18 +17,17 @@ calculate.addEventListener("click", (e) => {
     (Math.pow(1 + TINt, month) * TINt) / (Math.pow(1 + TINt, month) - 1);
   let total = capitalPrestado.value * multiplier;
 
-  let repayment = Math.round(total);
-  let interestOnly = Math.round(
+  let repayment = total;
+  let interestOnly = 
     (repayment * month - capitalPrestado.value) / 360
-  );
+  ;
   mostrarAviso();
   if (radioRepayment.checked) {
     console.log("repayment : ", repayment);
-    crearTarjetaResultado(repayment);
+    crearTarjetaResultado(repayment, interestOnly);
   } else if (radioInterestOnly.checked) {
     console.log("Intertest Only : ", interestOnly);
-    crearTarjetaResultado(interestOnly);
-
+    crearTarjetaResultado(repayment, interestOnly);
   }
 });
 
@@ -55,29 +54,64 @@ function mostrarAviso() {
 
 function mostrarResultado() {}
 
-function crearTarjetaResultado(result) {
-  let padre = document.getElementsByClassName("container2__results_p")[0].parentNode;
+function crearTarjetaResultado(repayment, interest) {
+  let padre = document.getElementsByClassName("container2__results_p")[0]
+    .parentNode;
 
   let nuevoDiv = document.createElement("div");
   let divAnterior = document.getElementsByClassName("container2__results_p")[0];
 
   padre.insertBefore(nuevoDiv, divAnterior.nextSibling);
-  nuevoDiv.className  = "container_tarjeta";
+  nuevoDiv.className = "container_tarjeta";
 
   let p1 = document.createElement("p");
   p1.innerText = "Your monthly repayments";
+  p1.style.padding = "5px 0px";
+  p1.style.textAlign= "Left";
 
-  let monto = document.createElement("p");
-  
+  let repaymentP = document.createElement("p");
+  let interestP = document.createElement("p");
+  let hr = document.createElement("hr");
 
   let p2 = document.createElement("p");
   p2.innerText = "Total you'll repay over the term";
+  p2.style.padding = "10px 0px 5px";
+  p2.style.textAlign= "Left";
 
+  let containerTarjeta =
+    document.getElementsByClassName("container_tarjeta")[0];
+  containerTarjeta.style.backgroundColor = "rgb(23 41 50)"
 
-  let containerTarjeta = document.getElementsByClassName("container_tarjeta")[0];
+  containerTarjeta.style.padding= "10px";
+  containerTarjeta.style.marginTop= "15px";
+  containerTarjeta.style.borderTop= "solid hsl(61, 70%, 52%)";
+  containerTarjeta.style.borderRadius= "5px";
+  containerTarjeta.style.textAlign= "Left";
 
   containerTarjeta.appendChild(p1);
-  monto.innerText = result;
-  containerTarjeta.appendChild(monto);
+  //Estilos del resultado
+  repaymentP.innerText = repayment.toLocaleString('en');
+  repaymentP.style.padding = "5px 0px";
+  repaymentP.style.fontSize = "45px";
+  repaymentP.style.color = "hsl(61, 70%, 52%)";
+  repaymentP.style.textAlign= "Left";
+  
+  interestP.style.fontSize = "20px";
+  interestP.innerText = interest.toLocaleString('en-DE');
+  interestP.style.textAlign= "Left";
+  interestP.style.color= "white";
+  interestP.style.padding = "5px 0px";
+
+ 
+
+  containerTarjeta.appendChild(repaymentP); 
+  containerTarjeta.appendChild(hr);
   containerTarjeta.appendChild(p2);
+ 
+  containerTarjeta.appendChild(interestP);
+
 }
+
+    
+    
+ 
