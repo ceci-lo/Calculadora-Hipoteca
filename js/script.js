@@ -98,12 +98,14 @@ function crearTarjetaResultado(repayment, interest) {
   containerTarjeta.appendChild(p1);
   //Estilos del resultado
   repaymentP.innerText = repayment.toLocaleString('en');
+  repaymentP.className = "repaymentP"
   repaymentP.style.padding = "5px 0px";
   repaymentP.style.fontSize = "45px";
   repaymentP.style.color = "hsl(61, 70%, 52%)";
   repaymentP.style.textAlign= "Left";
   
   interestP.style.fontSize = "20px";
+  interestP.className = "interestP"
   interestP.innerText = interest.toLocaleString('en-DE');
   interestP.style.textAlign= "Left";
   interestP.style.color= "white";
@@ -116,7 +118,18 @@ function crearTarjetaResultado(repayment, interest) {
   containerTarjeta.appendChild(p2);
  
   containerTarjeta.appendChild(interestP);
-  } 
+  } else {
+    let tomarRepaymentP = document.getElementsByClassName("repaymentP")[0]
+    let tomarInterestP = document.getElementsByClassName("interestP")[0]
+
+    if(tomarInterestP && tomarRepaymentP){
+      tomarInterestP.innerText = interest.toLocaleString('en-DE');;
+      tomarRepaymentP.innerText = repayment.toLocaleString('en-DE');;
+
+
+    }
+
+  }
 }
 
     
