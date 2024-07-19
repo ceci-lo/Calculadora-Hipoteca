@@ -239,7 +239,8 @@ body{
         top: 123px;
     }
     .spanmTerm {
-        right: 185px;
+        right: 185px
+        ;
     }
     .container2__results {
         width:50%;
