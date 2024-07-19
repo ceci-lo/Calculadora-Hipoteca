@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de hipoteca</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-    rel="stylesheet"  type='text/css'>
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+        rel="stylesheet" type='text/css'>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
@@ -26,32 +26,39 @@
             <div>
                 <form>
                     <label for="mAmoung">Mortgage Amount</label><br>
-                    <input type="number" id="mAmoung" name="mAmoung"><span class="spanUsd"><i class="fa fa-usd" aria-hidden="true"></span></i><br>
-                    <label for="mTerm">Mortgage Term</label><br>
-                    <input type="number" id="mTerm" name="mTerm"><span class="spanmTerm">years</span><br>
-                    <label for="iRate">Interest Rate</label><span class="spanPercent"> % </span><br>
-                    <input type="number" id="iRate" name="iRate"><br>
+                    <input type="number" id="mAmoung" name="mAmoung"><span class="spanUsd"><i class="fa fa-usd"
+                            aria-hidden="true"></span></i><br>
+                    <div class="container1__calculator__form_twoInputs">
+                        <div class="container1__calculator__form_twoInput_one">
+                            <label for="mTerm">Mortgage Term</label><br>
+                            <input type="number" id="mTerm" name="mTerm"><span class="spanmTerm">years</span><br>
+                        </div>
+                        <div class="container1__calculator__form_twoInput_two">
+                            <label for="iRate">Interest Rate</label><span class="spanPercent"> % </span><br>
+                            <input type="number" id="iRate" name="iRate"><br>
+                        </div>
+                    </div>
                     <div>
                         <label for="mRate">Mortgage Rate</label><br>
-
                         <input type="radio" id="repayment" name="fav_language" value="repayment">
                         <label class="MortgageRate" for="repayment">Repayment</label><br>
                         <input type="radio" id="InterestOnly" name="fav_language" value="InterestOnly">
                         <label class="MortgageRate" for="InterestOnly">Interest Only</label><br>
                     </div>
-                    <button id="btn"><img src="./assets/images/icon-calculator.svg" >Calculate Repayments</button>
+                    <button id="btn"><img src="./assets/images/icon-calculator.svg">Calculate Repayments</button>
                 </form>
             </div>
-       </div>
+        </div>
         <div class="container2__results">
             <div class="container2__results__alineacion">
-            <div class="container2__results__img"></div>
-            <h2 class="container2__results_title">Results shown here</h2>
-            <p class="container2__results_p">Complete the form and click "calculate repayments" to see what your mouthly repayment would be.</p>
-        </div>
+                <div class="container2__results__img"></div>
+                <h2 class="container2__results_title">Results shown here</h2>
+                <p class="container2__results_p">Complete the form and click "calculate repayments" to see what your
+                    mouthly repayment would be.</p>
+            </div>
         </div>
     </div>
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

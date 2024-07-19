@@ -37,9 +37,15 @@ function mostrarAviso() {
     "container2__results_title"
   )[0];
   let oldP = document.getElementsByClassName("container2__results_p")[0];
-  let img = document.getElementsByClassName("container2__results__img")[0];
-
-  img.remove();
+  let img = document.getElementsByClassName("container2__results__img");
+  for(let i  of img){ console.log("entre al for")
+  if (i[0] = 'container2__results__img') {
+      console.log("entre a eliminar")
+      i.remove();
+    } else {
+      continue;
+    }
+  }
   oldTitle.innerText = "Your results";
   oldP.innerText =
     'Your results shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again';
@@ -55,6 +61,7 @@ function mostrarAviso() {
 function mostrarResultado() {}
 
 function crearTarjetaResultado(repayment, interest) {
+  if(!document.getElementsByClassName("container_tarjeta")[0]){
   let padre = document.getElementsByClassName("container2__results_p")[0]
     .parentNode;
 
@@ -91,12 +98,14 @@ function crearTarjetaResultado(repayment, interest) {
   containerTarjeta.appendChild(p1);
   //Estilos del resultado
   repaymentP.innerText = repayment.toLocaleString('en');
+  repaymentP.className = "repaymentP"
   repaymentP.style.padding = "5px 0px";
   repaymentP.style.fontSize = "45px";
   repaymentP.style.color = "hsl(61, 70%, 52%)";
   repaymentP.style.textAlign= "Left";
   
   interestP.style.fontSize = "20px";
+  interestP.className = "interestP"
   interestP.innerText = interest.toLocaleString('en-DE');
   interestP.style.textAlign= "Left";
   interestP.style.color= "white";
@@ -109,7 +118,18 @@ function crearTarjetaResultado(repayment, interest) {
   containerTarjeta.appendChild(p2);
  
   containerTarjeta.appendChild(interestP);
+  } else {
+    let tomarRepaymentP = document.getElementsByClassName("repaymentP")[0]
+    let tomarInterestP = document.getElementsByClassName("interestP")[0]
 
+    if(tomarInterestP && tomarRepaymentP){
+      tomarInterestP.innerText = interest.toLocaleString('en-DE');;
+      tomarRepaymentP.innerText = repayment.toLocaleString('en-DE');;
+
+
+    }
+
+  }
 }
 
     
