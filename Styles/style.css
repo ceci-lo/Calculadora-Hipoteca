@@ -73,7 +73,6 @@ body{
         border-radius: 3px;
         border-color: hsl(200, 24%, 40%) ;
         border-width: 1px;
-        opacity: 0.5;
         display: block;
     }
     #mAmoung{
@@ -101,8 +100,7 @@ body{
         padding: 4.8px 15px;
         right: 0;
         top: 217px;
-        color: hsl(200, 24%, 40%);
-        
+        color: hsl(200, 24%, 40%); 
         background-color: hsl(201deg 62.37% 91.63%);
     }
 #repayment, #InterestOnly{
@@ -156,10 +154,10 @@ body{
     .container1__calculator button{
         position: relative;
        background-color: hsl(61, 70%, 52%);
-     
        background-repeat: no-repeat;
         width: 100%;
         border-radius: 1024px;
+        border: solid  hsl(61, 70%, 52%);
         padding: 8px;
         align-items: center;
     }
@@ -233,6 +231,15 @@ body{
     }
     .container1__calculator__form_twoInput_two{
         width: 47.5%;
+    }
+    .container1__calculator button{
+        width: 80%;
+    }
+    .spanPercent{
+        top: 123px;
+    }
+    .spanmTerm {
+        right: 185px;
     }
     .container2__results {
         width:50%;
