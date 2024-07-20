@@ -6,13 +6,15 @@
     font-family: "Plus Jakarta Sans", sans-serif;
     font-style: normal;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     background-color: hsl(202, 86%, 94%);
 }
+
 /*## Colors
 
 ### Primary
@@ -42,50 +44,59 @@ body{
     .container1__calculator {
         margin: 20px 15px;
         height: 60%;
-        color: hsl(200, 24%, 40%) ;
-        
-        
+        color: hsl(200, 24%, 40%);
+
+
     }
-    .container1__calculator__title{
+
+    .container1__calculator__title {
         padding-bottom: 10px;
     }
-    .container1__calculator__title h2{
-         color: hsl(202, 55%, 16%);
-         
+
+    .container1__calculator__title h2 {
+        color: hsl(202, 55%, 16%);
+
     }
-     .container1__calculator__title a{
+
+    .container1__calculator__title a {
         text-decoration: underline;
         list-style: none;
-        color: hsl(200, 24%, 40%) ;
+        color: hsl(200, 24%, 40%);
         font-size: 13.5px;
     }
-    form{
+
+    form {
         position: relative;
     }
-    .container1__calculator label{
+
+    .container1__calculator label {
         font-size: 14.5px;
-        
+
     }
-    .container1__calculator input{
+
+    .container1__calculator input {
         width: 100%;
         margin: 7px 0px 12px 0px;
-        padding:5px 0px;
+        padding: 5px 0px;
         border-radius: 3px;
-        border-color: hsl(200, 24%, 40%) ;
+        border-color: hsl(200, 24%, 40%);
         border-width: 1px;
         display: block;
     }
-    #mAmoung{
-        padding:5px 0px 5px 25px;
-        width:91%;
+
+    #mAmoung {
+        padding: 5px 0px 5px 25px;
+        width: 91%;
     }
-    .spanUsd{
+
+    .spanUsd {
         position: absolute;
         padding: 4.8px 8px;
-        left:1.3px;
-        top:29px;
+        left: 1.3px;
+        top: 29px;
         background-color: hsl(201deg 62.37% 91.63%);
     }
+
     .spanmTerm {
         position: absolute;
         padding: 4.8px 8px;
@@ -93,82 +104,88 @@ body{
         color: hsl(200, 24%, 40%);
         top: 123px;
         right: -1px;
+    }
 
-}
-    .spanPercent{
+    .spanPercent {
         position: absolute;
         padding: 4.8px 15px;
         right: 0;
         top: 217px;
-        color: hsl(200, 24%, 40%); 
+        color: hsl(200, 24%, 40%);
         background-color: hsl(201deg 62.37% 91.63%);
     }
-#repayment, #InterestOnly{
-    width: auto;
-   
-}
-/*RADIO BUTTON*/
- 
-  input[type="radio"]{
-    display:none;
-  }
-  
-  .MortgageRate{
-    width: 100%;
-    position:relative;
-    color: hsl(202, 55%, 16%);
-    font-family:"Poppins", sans-serif;
-    cursor:pointer;
-    display:inline-flex;
-    gap:0.8em;
-    border: 3px solid hsl(200, 24%, 40%);
-    border-radius:3px; 
-    border-width: 1px;
-    padding: 8px 0px;
-    align-items: center;
-    margin: 10px 0px;
-  }
-  
-  .MortgageRate:before {
-    content: "";
-    height: 1em;
-    width: 1em;
-    border: 1px solid hsl(200, 24%, 40%);
-    border-radius: 50%;
-    margin-left: 9px;
-  }
-  
-  input[type="radio"]:checked + .MortgageRate:before{
-    height: 1em;
-    width: 1em;
-    border: 2px solid hsl(61, 70%, 52%);
-    background-color: hsl(61, 55%, 85%);
-    color: hsl(202, 55%, 16%);
-  }
-  input[type="radio"]:checked + .MortgageRate{
-    background-color: hsl(61, 55%, 85%);
-    border-color: hsl(61, 70%, 52%) ;
-    color: hsl(202, 55%, 16%);
-  }
 
-    .container1__calculator button{
+    #repayment,
+    #InterestOnly {
+        width: auto;
+
+    }
+
+    /*RADIO BUTTON*/
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .MortgageRate {
+        width: 100%;
         position: relative;
-       background-color: hsl(61, 70%, 52%);
-       background-repeat: no-repeat;
+        color: hsl(202, 55%, 16%);
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+        display: inline-flex;
+        gap: 0.8em;
+        border: 3px solid hsl(200, 24%, 40%);
+        border-radius: 3px;
+        border-width: 1px;
+        padding: 8px 0px;
+        align-items: center;
+        margin: 10px 0px;
+    }
+
+    .MortgageRate:before {
+        content: "";
+        height: 1em;
+        width: 1em;
+        border: 1px solid hsl(200, 24%, 40%);
+        border-radius: 50%;
+        margin-left: 9px;
+    }
+
+    input[type="radio"]:checked+.MortgageRate:before {
+        height: 1em;
+        width: 1em;
+        border: 2px solid hsl(61, 70%, 52%);
+        background-color: hsl(61, 55%, 85%);
+        color: hsl(202, 55%, 16%);
+    }
+
+    input[type="radio"]:checked+.MortgageRate {
+        background-color: hsl(61, 55%, 85%);
+        border-color: hsl(61, 70%, 52%);
+        color: hsl(202, 55%, 16%);
+    }
+
+    .container1__calculator button {
+        position: relative;
+        background-color: hsl(61, 70%, 52%);
+        background-repeat: no-repeat;
         width: 100%;
         border-radius: 1024px;
-        border: solid  hsl(61, 70%, 52%);
+        border: solid hsl(61, 70%, 52%);
         padding: 8px;
         align-items: center;
     }
-    .container1__calculator button img{
-        position:absolute;
+
+    .container1__calculator button img {
+        position: absolute;
         top: 7px;
         left: 30px;
         text-align: center;
         padding: 0px 8px 0px 0px;
-       
+
     }
+
     /*----CONTAINER 2*/
     .container2__results {
         height: 40%;
@@ -187,8 +204,8 @@ body{
 
     .container2__results__alineacion {
         margin: 20px 15px 0px;
-        padding:20px 0px;
-       
+        padding: 20px 0px;
+
     }
 
     .container2__results__alineacion h2 {
@@ -197,10 +214,11 @@ body{
         padding: 10px 0px;
         color: hsl(0, 0%, 100%);
     }
-    .container2__results__alineacion p{
-        color:   hsl(203, 41%, 72%);
+
+    .container2__results__alineacion p {
+        color: hsl(203, 41%, 72%);
         text-align: center;
-        padding:0px 21px;
+        padding: 0px 21px;
         font-size: 11px;
         line-height: 1.4em;
     }
@@ -210,43 +228,118 @@ body{
     body {
         height: 100vh;
     }
+
     .container {
         display: flex;
         border-radius: 4%;
         width: 95%;
     }
+
     .container1__calculator {
         width: 50%;
     }
-    .container1__calculator__title{
+
+    .container1__calculator__title {
         display: flex;
         justify-content: space-between;
     }
-    .container1__calculator__form_twoInputs{
+
+    .container1__calculator__form_twoInputs {
         display: flex;
     }
-    .container1__calculator__form_twoInput_one{
+
+    .container1__calculator__form_twoInput_one {
         width: 47.5%;
         margin-right: 5%;
     }
-    .container1__calculator__form_twoInput_two{
+
+    .container1__calculator__form_twoInput_two {
         width: 47.5%;
     }
-    .container1__calculator button{
+
+    .container1__calculator button {
         width: 80%;
     }
-    .spanPercent{
+
+    .spanPercent {
         top: 123px;
     }
+
     .spanmTerm {
-        right: 185px
-        ;
+        right: 185px;
     }
+
     .container2__results {
-        width:50%;
+        width: 50%;
         border-top-right-radius: 4%;
         border-bottom-right-radius: 4%;
         border-bottom-left-radius: 15%;
         height: auto;
+    }
+}
+
+@media(min-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    .container1__calculator {
+        margin: 20px 25px;
+    }
+    .container1__calculator input {
+        padding: 5px 0px 5px 10px;
+    }
+
+    .spanmTerm {
+        right: 231px;
+    }
+    .spanPercent {
+        right: -11px;
+    }
+    #mAmoung {
+
+        width: 95%;
+    }
+
+    .container1__calculator button {
+        margin-bottom: 15px;
+        width: 70%;
+    }
+    .radioButtons{
+        margin-bottom: 20px;
+    }
+    .container2__results__alineacion > .container2__results__title{
+        padding-left: 15px;
+         font-size: 22px;
+    }
+    .container2__results_p { 
+         padding-left: 15px;
+         font-size: 14px;
+    }
+    .container_tarjeta{
+        padding: 15px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .container {
+        width: 60%;
+        border-top-right-radius: 4%;
+        border-bottom-left-radius: 4%;
+    }
+    .container1__calculator {
+        margin: 20px 30px;
+    }
+    .spanmTerm {
+        right: 200px;
+    }
+}
+
+@media(min-width: 1536px) {
+    .container {
+        width: 50%;
+    }
+    .spanmTerm {
+        right: 226px;
     }
 }

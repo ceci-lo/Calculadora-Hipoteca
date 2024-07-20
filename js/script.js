@@ -40,7 +40,7 @@ function mostrarAviso() {
   let img = document.getElementsByClassName("container2__results__img");
   for(let i  of img){ console.log("entre al for")
   if (i[0] = 'container2__results__img') {
-      console.log("entre a eliminar")
+
       i.remove();
     } else {
       continue;
@@ -48,7 +48,7 @@ function mostrarAviso() {
   }
   oldTitle.innerText = "Your results";
   oldP.innerText =
-    'Your results shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again';
+    'Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.';
 
   //Estilos
   // Titulo
@@ -56,6 +56,17 @@ function mostrarAviso() {
   oldTitle.style.textAlign = "left";
   oldP.style.textAlign = "left";
   oldP.style.padding = "0px 3px";
+
+  // screen 1024px
+  if(innerWidth > 1023){
+  
+    oldTitle.style.padding = "10px 15px";
+    oldTitle.style.fontSize = "22px";
+    oldP.style.fontSize = "14px";
+    oldP.style.padding = "0px 15px";
+ 
+
+  }
 }
 
 function mostrarResultado() {}
@@ -75,7 +86,11 @@ function crearTarjetaResultado(repayment, interest) {
   p1.innerText = "Your monthly repayments";
   p1.style.padding = "5px 0px";
   p1.style.textAlign= "Left";
+//screen 1024
+if(innerWidth > 1023){
+  p1.style.fontSize = "14px";
 
+}
   let repaymentP = document.createElement("p");
   let interestP = document.createElement("p");
   let hr = document.createElement("hr");
@@ -84,6 +99,12 @@ function crearTarjetaResultado(repayment, interest) {
   p2.innerText = "Total you'll repay over the term";
   p2.style.padding = "10px 0px 5px";
   p2.style.textAlign= "Left";
+//screen 1024
+if(innerWidth > 1023){
+  p2.style.marginTop = "10px";
+  p2.style.fontSize = "14px";
+}
+
 
   let containerTarjeta =
     document.getElementsByClassName("container_tarjeta")[0];
@@ -94,7 +115,15 @@ function crearTarjetaResultado(repayment, interest) {
   containerTarjeta.style.borderTop= "solid hsl(61, 70%, 52%)";
   containerTarjeta.style.borderRadius= "5px";
   containerTarjeta.style.textAlign= "Left";
+//screen 1024 
+  if(innerWidth > 1023){
+    containerTarjeta.style.marginTop= "25px";
+    containerTarjeta.style.marginLeft= "15px";
+    containerTarjeta.style.marginRight= "20px";
+    containerTarjeta.style.padding= "15px";
 
+  }
+  
   containerTarjeta.appendChild(p1);
   //Estilos del resultado
   repaymentP.innerText = repayment.toLocaleString('en');
