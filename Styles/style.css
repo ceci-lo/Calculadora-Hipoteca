@@ -104,7 +104,6 @@ body {
         color: hsl(200, 24%, 40%);
         top: 123px;
         right: -1px;
-
     }
 
     .spanPercent {
@@ -319,5 +318,28 @@ body {
     }
     .container_tarjeta{
         padding: 15px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .container {
+        width: 60%;
+        border-top-right-radius: 4%;
+        border-bottom-left-radius: 4%;
+    }
+    .container1__calculator {
+        margin: 20px 30px;
+    }
+    .spanmTerm {
+        right: 200px;
+    }
+}
+
+@media(min-width: 1536px) {
+    .container {
+        width: 50%;
+    }
+    .spanmTerm {
+        right: 226px;
     }
 }
