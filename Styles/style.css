@@ -85,7 +85,7 @@ body {
     }
 
     #mAmoung {
-        padding: 5px 0px 5px 25px;
+        padding: 5px 0px 5px 29px;
         width: 91%;
     }
 
@@ -266,7 +266,7 @@ body {
     }
 
     .spanmTerm {
-        right: 185px;
+        right: 52.5%;
     }
 
     .container2__results {
@@ -291,7 +291,7 @@ body {
     }
 
     .spanmTerm {
-        right: 231px;
+        right: 50%;
     }
     .spanPercent {
         right: -11px;
@@ -308,9 +308,8 @@ body {
     .radioButtons{
         margin-bottom: 20px;
     }
-    .container2__results__alineacion > .container2__results__title{
-        padding-left: 15px;
-         font-size: 22px;
+    .container2__results__alineacion{
+        margin-top: 70px;
     }
     .container2__results_p { 
          padding-left: 15px;
@@ -318,6 +317,23 @@ body {
     }
     .container_tarjeta{
         padding: 15px;
+    }
+
+    .container2__results__img {
+          padding:20px 20px;
+        
+    }
+    .container2__results__alineacion h2 {
+        padding: 4px 0px 8px 0px;
+    }
+    .container2__results__alineacion p {
+        font-size: 12px;
+        padding: 4px 21px;
+    }
+}
+@media(min-width:1280px){
+    .spanmTerm {
+        right: 50.7%;
     }
 }
 
@@ -331,8 +347,15 @@ body {
         margin: 20px 30px;
     }
     .spanmTerm {
-        right: 200px;
+        right: 50%;
     }
+    .container2__results__img {
+        padding:22px 21px;
+      
+  }
+  .container2__results__alineacion p {
+      font-size: 13px;
+  }
 }
 
 @media(min-width: 1536px) {
@@ -340,6 +363,6 @@ body {
         width: 50%;
     }
     .spanmTerm {
-        right: 226px;
+        right: 49.4%;
     }
 }
