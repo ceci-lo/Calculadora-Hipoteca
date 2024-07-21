@@ -2,10 +2,12 @@ console.warn("HELLO word");
 let capitalPrestado = document.getElementById("mAmoung");
 let years = document.getElementById("mTerm");
 let interest = document.getElementById("iRate");
+
 let radioRepayment = document.getElementById("repayment");
 let radioInterestOnly = document.getElementById("InterestOnly");
 
 let calculate = document.getElementById("btn");
+
 
 calculate.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -32,7 +34,6 @@ calculate.addEventListener("click", (e) => {
 });
 
 function mostrarAviso() {
-  console.log("mostrar aviso");
   let oldTitle = document.getElementsByClassName(
     "container2__results_title"
   )[0];
@@ -64,12 +65,8 @@ function mostrarAviso() {
     oldTitle.style.fontSize = "22px";
     oldP.style.fontSize = "14px";
     oldP.style.padding = "0px 15px";
- 
-
   }
 }
-
-function mostrarResultado() {}
 
 function crearTarjetaResultado(repayment, interest) {
   if(!document.getElementsByClassName("container_tarjeta")[0]){
@@ -159,6 +156,15 @@ if(innerWidth > 1023){
     }
 
   }
+}
+
+function limpiarDatos(){
+    capitalPrestado.value ="";
+    years.value = "";
+    interest.value="";
+   radioRepayment.checked = false;
+   radioInterestOnly.checked = false;
+
 }
 
     
