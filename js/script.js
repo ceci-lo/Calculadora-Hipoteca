@@ -12,6 +12,9 @@ let calculate = document.getElementById("btn");
 calculate.addEventListener("click", (e) => {
   e.stopPropagation();
   e.preventDefault();
+
+  validacionCampos();
+ 
   let month = years.value * 12;
   let TIN = interest.value / 12;
   let TINt = TIN / 100;
@@ -25,10 +28,10 @@ calculate.addEventListener("click", (e) => {
   ;
   mostrarAviso();
   if (radioRepayment.checked) {
-    console.log("repayment : ", repayment);
+   
     crearTarjetaResultado(repayment, interestOnly);
   } else if (radioInterestOnly.checked) {
-    console.log("Intertest Only : ", interestOnly);
+    
     crearTarjetaResultado(repayment, interestOnly);
   }
 });
@@ -167,6 +170,37 @@ function limpiarDatos(){
 
 }
 
+function validacionCampos() {
+  if(capitalPrestado.value == ""){
+    let padre = document.getElementsByTagName("form")[0];
+    let campoRequerido = document.createElement("p");
+    campoRequerido.innerText = "This field is required";
+    let divAnterior = document.getElementsByClassName(
+      "container1__calculator__form_twoInputs"
+    )[0];
+  
+    padre.insertBefore(campoRequerido, divAnterior);
+    campoRequerido.style.color = "hsl(4, 69%, 50%)";
+    campoRequerido.style.fontSize = "13px";
+    capitalPrestado.style.borderColor = "hsl(4, 69%, 50%)";
+    capitalPrestado.style.color = "hsl(4, 69%, 50%)";
+
+    let span = document.getElementsByClassName('spanUsd')[0];
+    span.style.backgroundColor = "hsl(4, 69%, 50%)";
+    span.style.color = "white";
+
+  }
+
+}
+
+
+const expresiones = {
+	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	password: /^.{4,12}$/, // 4 a 12 digitos.
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+}
     
     
  

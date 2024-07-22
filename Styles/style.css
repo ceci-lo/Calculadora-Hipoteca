@@ -91,10 +91,15 @@ body {
 
     .spanUsd {
         position: absolute;
-        padding: 4.8px 8px;
+        padding: 5px 8px;
         left: 1.3px;
         top: 29px;
         background-color: hsl(201deg 62.37% 91.63%);
+    }
+
+    .container1__calculator__form_twoInput_one {
+        display: block;
+        position: relative;
     }
 
     .spanmTerm {
@@ -102,15 +107,20 @@ body {
         padding: 4.8px 8px;
         background-color: hsl(201deg 62.37% 91.63%);
         color: hsl(200, 24%, 40%);
-        top: 123px;
+        top: 29px;
         right: -1px;
+    }
+
+    .container1__calculator__form_twoInput_two {
+        display: block;
+        position: relative;
     }
 
     .spanPercent {
         position: absolute;
         padding: 4.8px 15px;
-        right: 0;
-        top: 217px;
+        right: -1px;
+        top: 29px;
         color: hsl(200, 24%, 40%);
         background-color: hsl(201deg 62.37% 91.63%);
     }
@@ -261,13 +271,6 @@ body {
         width: 80%;
     }
 
-    .spanPercent {
-        top: 123px;
-    }
-
-    .spanmTerm {
-        right: 52.5%;
-    }
 
     .container2__results {
         width: 50%;
@@ -286,56 +289,63 @@ body {
     .container1__calculator {
         margin: 20px 25px;
     }
+
     .container1__calculator input {
         padding: 5px 0px 5px 10px;
     }
 
-    .spanmTerm {
-        right: 50%;
-    }
-    .spanPercent {
-        right: -11px;
-    }
     #mAmoung {
 
         width: 95%;
+    }
+
+    .spanmTerm {
+        right: -11px;
+    }
+
+
+    .spanPercent {
+        right: -11px;
     }
 
     .container1__calculator button {
         margin-bottom: 15px;
         width: 70%;
     }
-    .radioButtons{
+
+    .radioButtons {
         margin-bottom: 20px;
     }
-    .container2__results__alineacion{
+
+    .container2__results__alineacion {
         margin-top: 70px;
     }
-    .container2__results_p { 
-         padding-left: 15px;
-         font-size: 14px;
+
+    .container2__results_p {
+        padding-left: 15px;
+        font-size: 14px;
     }
-    .container_tarjeta{
+
+    .container_tarjeta {
         padding: 15px;
     }
 
     .container2__results__img {
-          padding:20px 20px;
-        
+        padding: 20px 20px;
+
     }
+
     .container2__results__alineacion h2 {
         padding: 4px 0px 8px 0px;
     }
+
     .container2__results__alineacion p {
         font-size: 12px;
         padding: 4px 21px;
     }
 }
-@media(min-width:1280px){
-    .spanmTerm {
-        right: 50.7%;
-    }
-}
+
+@media(min-width:1280px) {}
 
 @media(min-width: 1440px) {
     .container {
@@ -343,26 +353,24 @@ body {
         border-top-right-radius: 4%;
         border-bottom-left-radius: 4%;
     }
+
     .container1__calculator {
         margin: 20px 30px;
     }
-    .spanmTerm {
-        right: 50%;
-    }
+
     .container2__results__img {
-        padding:22px 21px;
-      
-  }
-  .container2__results__alineacion p {
-      font-size: 13px;
-  }
+        padding: 22px 21px;
+
+    }
+
+    .container2__results__alineacion p {
+        font-size: 13px;
+    }
 }
 
 @media(min-width: 1536px) {
     .container {
         width: 50%;
     }
-    .spanmTerm {
-        right: 49.4%;
-    }
+
 }
