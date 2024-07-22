@@ -216,7 +216,7 @@ function validacionCampos() {
     let campoRequerido = document.createElement("p");
     campoRequerido.innerText = "This field is required";
 
-  padre.appendChild(campoRequerido);
+   padre.appendChild(campoRequerido);
     campoRequerido.style.color = "hsl(4, 69%, 50%)";
     campoRequerido.style.fontSize = "13px";
 
