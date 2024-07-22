@@ -191,6 +191,43 @@ function validacionCampos() {
 
   }
 
+  if(years.value == ""){
+    let padre = document.getElementsByClassName("container1__calculator__form_twoInput_one")[0];
+    let campoRequerido = document.createElement("p");
+    campoRequerido.innerText = "This field is required";
+   
+    padre.appendChild(campoRequerido);
+    campoRequerido.style.color = "hsl(4, 69%, 50%)";
+    campoRequerido.style.fontSize = "13px";
+
+   years.style.borderColor = "hsl(4, 69%, 50%)";
+    years.style.color = "hsl(4, 69%, 50%)";
+
+    let span = document.getElementsByClassName('spanmTerm')[0];
+    span.style.backgroundColor = "hsl(4, 69%, 50%)";
+    span.style.color = "white";
+
+  }
+
+
+
+  if(interest.value == ""){
+    let padre = document.getElementsByClassName("container1__calculator__form_twoInput_two")[0];
+    let campoRequerido = document.createElement("p");
+    campoRequerido.innerText = "This field is required";
+
+  padre.appendChild(campoRequerido);
+    campoRequerido.style.color = "hsl(4, 69%, 50%)";
+    campoRequerido.style.fontSize = "13px";
+
+    interest.style.borderColor = "hsl(4, 69%, 50%)";
+    interest.style.color = "hsl(4, 69%, 50%)";
+
+    let span = document.getElementsByClassName('spanPercent')[0];
+   span.style.backgroundColor = "hsl(4, 69%, 50%)";
+   span.style.color = "white";
+
+  }
 }
 
 
