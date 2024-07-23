@@ -182,6 +182,8 @@ function validacionCampos() {
     padre.insertBefore(campoRequerido, divAnterior);
     campoRequerido.style.color = "hsl(4, 69%, 50%)";
     campoRequerido.style.fontSize = "13px";
+    campoRequerido.style.marginBottom = "4px";
+
     capitalPrestado.style.borderColor = "hsl(4, 69%, 50%)";
     capitalPrestado.style.color = "hsl(4, 69%, 50%)";
 
@@ -199,6 +201,7 @@ function validacionCampos() {
     padre.appendChild(campoRequerido);
     campoRequerido.style.color = "hsl(4, 69%, 50%)";
     campoRequerido.style.fontSize = "13px";
+    campoRequerido.style.marginBottom = "4px";
 
    years.style.borderColor = "hsl(4, 69%, 50%)";
     years.style.color = "hsl(4, 69%, 50%)";
@@ -219,6 +222,7 @@ function validacionCampos() {
    padre.appendChild(campoRequerido);
     campoRequerido.style.color = "hsl(4, 69%, 50%)";
     campoRequerido.style.fontSize = "13px";
+    campoRequerido.style.marginBottom = "4px";
 
     interest.style.borderColor = "hsl(4, 69%, 50%)";
     interest.style.color = "hsl(4, 69%, 50%)";
