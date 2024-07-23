@@ -12,9 +12,7 @@ let calculate = document.getElementById("btn");
 calculate.addEventListener("click", (e) => {
   e.stopPropagation();
   e.preventDefault();
-
-  validacionCampos();
- 
+if (validacionCampos()){
   let month = years.value * 12;
   let TIN = interest.value / 12;
   let TINt = TIN / 100;
@@ -34,6 +32,7 @@ calculate.addEventListener("click", (e) => {
     
     crearTarjetaResultado(repayment, interestOnly);
   }
+}
 });
 
 function mostrarAviso() {
@@ -214,6 +213,7 @@ function limpiarDatos() {
 }
 
 function validacionCampos() {
+  let flag = true;  
   if(capitalPrestado.value == ""){
     let padre = document.getElementsByTagName("form")[0];
     let campoRequerido = document.createElement("p");
@@ -235,7 +235,7 @@ function validacionCampos() {
     let span = document.getElementsByClassName('spanUsd')[0];
     span.style.backgroundColor = "hsl(4, 69%, 50%)";
     span.style.color = "white";
-
+    flag = false; 
   }
 
   if(years.value == ""){
@@ -255,7 +255,7 @@ function validacionCampos() {
     let span = document.getElementsByClassName('spanmTerm')[0];
     span.style.backgroundColor = "hsl(4, 69%, 50%)";
     span.style.color = "white";
-
+    flag = false; 
   }
 
 
@@ -277,18 +277,13 @@ function validacionCampos() {
     let span = document.getElementsByClassName('spanPercent')[0];
    span.style.backgroundColor = "hsl(4, 69%, 50%)";
    span.style.color = "white";
-
+   flag = false; 
   }
+  return flag;
 }
 
 
-const expresiones = {
-	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
-}
+
     
     
  
