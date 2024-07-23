@@ -42,7 +42,7 @@ function mostrarAviso() {
   )[0];
   let oldP = document.getElementsByClassName("container2__results_p")[0];
   let img = document.getElementsByClassName("container2__results__img");
-  for(let i  of img){ console.log("entre al for")
+  for(let i  of img){ 
   if (i[0] = 'container2__results__img') {
 
       i.remove();
@@ -161,13 +161,56 @@ if(innerWidth > 1023){
   }
 }
 
-function limpiarDatos(){
-    capitalPrestado.value ="";
-    years.value = "";
-    interest.value="";
-   radioRepayment.checked = false;
-   radioInterestOnly.checked = false;
 
+function limpiarDatos() {
+  capitalPrestado.value = "";
+  years.value = "";
+  interest.value = "";
+  radioRepayment.checked = false;
+  radioInterestOnly.checked = false;
+
+  let campoRequerido = document.getElementsByClassName("campoRequerido");
+
+  if (campoRequerido.length > 0) {
+    let span = document.getElementsByClassName("spanUsd")[0];
+    let mTerm = document.getElementById("mTerm");
+    let spanmTerm = document.getElementsByClassName("spanmTerm");
+    let iRate = document.getElementById("iRate");
+    let spanPercent = document.getElementsByClassName("spanPercent");
+    for (let i = 0; i <= campoRequerido.length; i++) {
+      if (campoRequerido[i].className == "campoRequerido") {
+        campoRequerido[i].remove();
+        //se cambia el estilo al que debe tener por defecto
+        //1er input
+        capitalPrestado.style.borderColor = "hsl(200, 24%, 40%)";
+        capitalPrestado.style.color = "hsl(200, 24%, 40%)";
+
+        span.style.backgroundColor = "hsl(201deg 62.37% 91.63%)";
+        span.style.color = "hsl(200, 24%, 40%)";
+
+        //2do input
+        mTerm.style.borderColor = "hsl(200, 24%, 40%)";
+        mTerm.style.color = "hsl(200, 24%, 40%)";
+
+        spanmTerm[0].style.backgroundColor = "hsl(201deg 62.37% 91.63%)";
+        spanmTerm[0].style.color = "hsl(200, 24%, 40%)";
+
+        //3er input
+        iRate.style.borderColor = "hsl(200, 24%, 40%)";
+        iRate.style.color = "hsl(200, 24%, 40%)";
+
+        spanPercent[0].style.backgroundColor = "hsl(201deg 62.37% 91.63%)";
+        spanPercent[0].style.color = "hsl(200, 24%, 40%)";
+      }
+    }
+
+    if (
+      campoRequerido.length > 0 &&
+      campoRequerido[0].className == "campoRequerido"
+    ) {
+      campoRequerido[0].remove();
+    }
+  }
 }
 
 function validacionCampos() {
@@ -175,6 +218,8 @@ function validacionCampos() {
     let padre = document.getElementsByTagName("form")[0];
     let campoRequerido = document.createElement("p");
     campoRequerido.innerText = "This field is required";
+    campoRequerido.className = "campoRequerido";
+
     let divAnterior = document.getElementsByClassName(
       "container1__calculator__form_twoInputs"
     )[0];
@@ -197,6 +242,7 @@ function validacionCampos() {
     let padre = document.getElementsByClassName("container1__calculator__form_twoInput_one")[0];
     let campoRequerido = document.createElement("p");
     campoRequerido.innerText = "This field is required";
+    campoRequerido.className = "campoRequerido";
    
     padre.appendChild(campoRequerido);
     campoRequerido.style.color = "hsl(4, 69%, 50%)";
@@ -218,6 +264,7 @@ function validacionCampos() {
     let padre = document.getElementsByClassName("container1__calculator__form_twoInput_two")[0];
     let campoRequerido = document.createElement("p");
     campoRequerido.innerText = "This field is required";
+    campoRequerido.className = "campoRequerido";
 
    padre.appendChild(campoRequerido);
     campoRequerido.style.color = "hsl(4, 69%, 50%)";
