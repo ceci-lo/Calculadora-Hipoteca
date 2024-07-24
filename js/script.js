@@ -1,4 +1,4 @@
-console.warn("HELLO word");
+
 let capitalPrestado = document.getElementById("mAmoung");
 let years = document.getElementById("mTerm");
 let interest = document.getElementById("iRate");
